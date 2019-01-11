@@ -1,0 +1,23 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: ~
+    database_user: ~
+    database_password: ~
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    mailer_port: null
+    mailer_encryption: null
+    secret: ThisTokenIsNotSoSecretChangeIt
+    wap3.tools.mail_bot_name: null
+    wap3.tools.mail_bot_email: null
+    locale: en
+    wap3.api.table_prefix: admin_
+    wap3.admin.favicon:  ~
+    wap3.admin.title: 'Admin'
+    wap3.admin.logo: ~
+    wap3.admin.menu_view: 'horizontal'
+    wap3.admin.menu_service: service.admin.menu

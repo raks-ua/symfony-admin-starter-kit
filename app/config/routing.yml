@@ -1,0 +1,25 @@
+test_admin:
+    resource: "@TestAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+PROJECT_admin:
+    resource: "@PROJECTAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+bazinga_jstranslation_js:
+    resource: "@BazingaJsTranslationBundle/Resources/config/routing/routing.yml"
+
+wap3_admin:
+    resource: "@Wap3AdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+root:
+    path: /
+    defaults:
+        _controller: Wap3AdminBundle:Auth:login
+        path: /admin
+        permanent: true
+

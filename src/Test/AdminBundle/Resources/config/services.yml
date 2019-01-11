@@ -1,0 +1,29 @@
+services:
+    service.admin.menu:
+         class: Test\AdminBundle\Service\AdminMenuService
+         arguments: [ "@service_container" ]
+
+
+    menu.badwords:
+         class: Knp\Menu\MenuItem # the service definition requires setting the class
+         factory: ["@builder", createMainMenu]
+         arguments: ["@request", 'badwords']
+         scope: request # needed as we have the request as a dependency here
+         tags:
+            - { name: knp_menu.menu, alias: badwords } # The alias is what is used to retrieve the menu....
+
+    menu.messages:
+         class: Knp\Menu\MenuItem # the service definition requires setting the class
+         factory: ["@builder", createMainMenu]
+         arguments: ["@request", 'messages']
+         scope: request # needed as we have the request as a dependency here
+         tags:
+            - { name: knp_menu.menu, alias: messages } # The alias is what is used to retrieve the menu....
+
+    menu.moderate:
+         class: Knp\Menu\MenuItem # the service definition requires setting the class
+         factory: ["@builder", createMainMenu]
+         arguments: ["@request", 'moderate']
+         scope: request # needed as we have the request as a dependency here
+         tags:
+            - { name: knp_menu.menu, alias: moderate } # The alias is what is used to retrieve the menu....

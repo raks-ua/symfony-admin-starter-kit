@@ -1,0 +1,34 @@
+Test\CoreBundle\Entity\MessageTemplate:
+     group_sequence:
+        - MessageTemplate
+     properties:
+        key:
+            - NotBlank:
+                message: "key.enter"
+                groups: [MessageTemplate]
+
+Test\CoreBundle\Entity\User:
+     group_sequence:
+        - User
+     properties:
+        username:
+            - NotBlank:
+                message: "enter.username"
+                groups: [User]
+
+Test\CoreBundle\Entity\BadWord:
+     group_sequence:
+        - BadWord
+     constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [word, type]
+            message: "word.type.exist"
+     properties:
+        word:
+            - NotBlank:
+                message: "word.enter"
+                groups: [BadWord]
+        word:
+            - NotBlank:
+                message: "word.enter"
+                groups: [BadWord]
